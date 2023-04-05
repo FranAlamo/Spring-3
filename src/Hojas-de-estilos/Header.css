@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+[data-theme="light"] {
+  --background-image: url("../images/bg-desktop-light.jpg");
+  --background-color: white;
+  --text-color: rgb(6, 6, 44);
+  --content-color: white;
+}
+[data-theme="dark"] {
+  --background-image: url("../images/bg-desktop-dark.jpg");
+  --background-color: hsl(235, 24%, 19%);
+  --text-color: rgb(255, 255, 255);
+  --content-color: hsl(235, 24%, 19%);
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: -180px;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20%;
+  gap: 180%;
+  color: white;
+  margin-left: -18%;
+}
+.todolist,
+.to-do {
+  width: 100%;
+  max-width: 500px;
+}
+.to-do {
+  position: relative;
+  margin-top: 10%;
+}
+.todolist {
+  z-index: 1;
+  position: absolute;
+  top: 20%;
+  margin-bottom: 100px;
+}
+.todolist .todo-form {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin: 0 0 1rem 0;
+}
+.todolist .todo-form input {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 0;
+  border: none;
+  background: none;
+  color: black;
+}
+.todolist .todo-form input:focus {
+  outline: none;
+}
+.todolist .list {
+  background-color: var(--content-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.1);
+}
+.todolist .todos .todo {
+  border-bottom: 1px solid rgb(227, 225, 225);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.todolist .check-button {
+  margin-right: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 1px solid rgb(227, 225, 225);
+  border-radius: 100%;
+  background: none;
+  cursor: pointer;
+}
+
+.todolist .check-button img {
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+  display: none;
+}
+
+.todolist .check-button-completed {
+  background: var(--Check-Background);
+  border: none;
+}
+
+.todolist .check-button-completed img {
+  display: block;
+}
+
+.todolist .completed {
+  text-decoration: line-through;
+  color: var(--text-color);
+}
+
+.todolist .todos .todo .todo-content {
+  display: flex;
+  align-items: center;
+}
+
+.todolist .todos .todo .todo-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  word-break: break-all;
+}
+
+.todolist .todos .todo .delete-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.todolist .list-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+.todolist .list-bottom button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.todolist .list-bottom button.active {
+  color: var(--text-color);
+}
+
+.todolist .list-bottom button:hover {
+  color: var(--text-color);
+}
+
+.todolist button {
+  color: var(--text-color);
+}
+
+.App .bottom {
+  color: var(--text-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.App .bottom p {
+  text-align: center;
+  width: max-content;
+}

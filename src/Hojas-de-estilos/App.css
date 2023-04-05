@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --Bright-Blue: hsl(220, 98%, 61%);
+  --Check-Background: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+}
+[data-theme="light"] {
+  --background-image: url("../images/bg-desktop-light.jpg");
+  --background-color: hsl(236, 33%, 92%);
+  --text-color: hsl(235, 19%, 35%);
+  --mobile-image: url("../images/bg-mobile-light.jpg");
+}
+[data-theme="dark"] {
+  --background-image: url("../images/bg-desktop-dark.jpg");
+  --background-color: hsl(235, 21%, 11%);
+  --text-color: hsl(236, 33%, 92%);
+  --mobile-image: url("../images/bg-mobile-dark.jpg");
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  overflow: auto;
+  color: var(--text-color);
+  height: 100vh;
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--background-color);
+  position: relative;
+}
+.theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.p-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: var(--text-color);
+}
+.p-footertwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  color: rgb(177, 86, 195);
+}
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 0 5rem;
+    background-image: var(--mobile-image);
+  }
+  .todolist,
+  .header {
+    width: 87%;
+  }
+  .header-content {
+    margin-top: -50%;
+  }
+  .theme-button {
+    margin-left: -140%;
+  }
+  .list-bottom {
+    flex-direction: column;
+  }
+  .list-bottom .items-left {
+    order: 1;
+    position: absolute;
+    left: 1rem;
+  }
+  .list-bottom .clear-button {
+    order: 2;
+    position: absolute;
+    right: 1rem;
+  }
+  .list-bottom .filters {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    order: 3;
+    padding-top: 2rem;
+  }
+}
